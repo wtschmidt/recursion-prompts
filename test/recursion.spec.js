@@ -31,7 +31,7 @@ let {
 
 'use strict';
 
-describe('Exercises in Recursion in Recursion in Recursion in...', function() {
+describe('Recursion Prompts', function() {
 
   describe('1. Factorial', function() {
 
@@ -54,13 +54,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalFactorial = factorial;
       factorial = sinon.spy(factorial);
       factorial(4);
-      expect(factorial.callCount).to.be.above(1);
+      setTimeout(() => expect(factorial.callCount).to.be.above(1), 0);
       factorial = originalFactorial;
     });
 
   });
-
-
 
   describe('2. Sum of Integers', function() {
 
@@ -106,14 +104,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalSum = sum;
       sum = sinon.spy(sum);
       sum([1,2,3,4,5,6]);
-      expect(sum.callCount).to.be.above(1);
+      setTimeout(() => expect(sum.callCount).to.be.above(1), 0);
       sum = originalSum;
     });
 
   });
-
-
-
 
   describe('4. Check if Even', function() {
 
@@ -150,13 +145,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalIsEven = isEven;
       isEven = sinon.spy(isEven);
       isEven(118);
-      expect(isEven.callCount).to.be.above(1);
+      setTimeout(() => expect(isEven.callCount).to.be.above(1), 0);
       isEven = originalIsEven;
     });
 
   });
-
-
 
   describe('5. Sum Below', function() {
 
@@ -185,13 +178,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalSumBelow = sumBelow;
       sumBelow = sinon.spy(sumBelow);
       sumBelow(10);
-      expect(sumBelow.callCount).to.be.above(1);
+      setTimeout(() => expect(sumBelow.callCount).to.be.above(1), 0);
       sumBelow = originalSumBelow;
     });
 
   });
-
-
 
   describe('6. Integer Range', function() {
 
@@ -226,13 +217,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalRange = range;
       range = sinon.spy(range);
       range(3,8);
-      expect(range.callCount).to.be.above(1);
+      setTimeout(() => expect(range.callCount).to.be.above(1), 0);
       range = originalRange;
     });
 
   });
-
-
 
   describe('7. Compute Exponent', function() {
 
@@ -277,13 +266,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalExponent = exponent;
       exponent = sinon.spy(exponent);
       exponent(3,4);
-      expect(exponent.callCount).to.be.above(1);
+      setTimeout(() => expect(exponent.callCount).to.be.above(1), 0);
       exponent = originalExponent;
     });
 
   });
-
-
 
   describe('8. Power of Two', function() {
 
@@ -305,13 +292,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalPowerOfTwo = powerOfTwo;
       powerOfTwo = sinon.spy(powerOfTwo);
       powerOfTwo(32);
-      expect(powerOfTwo.callCount).to.be.above(1);
+      setTimeout(() => expect(powerOfTwo.callCount).to.be.above(1), 0);
       powerOfTwo = originalPowerOfTwo;
     });
 
   });
-
-
 
   describe('9. Reverse String', function() {
 
@@ -336,13 +321,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalReverse = reverse;
       reverse = sinon.spy(reverse);
       reverse('orangutan');
-      expect(reverse.callCount).to.be.above(1);
+      setTimeout(() => expect(reverse.callCount).to.be.above(1), 0);
       reverse = originalReverse;
     });
 
   });
-
-
 
   describe('10. Palindrome', function() {
 
@@ -373,15 +356,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalPalindrome = palindrome;
       palindrome = sinon.spy(palindrome);
       palindrome('saippuakivikauppias');
-      expect(palindrome.callCount).to.be.above(1);
+      setTimeout(() => expect(palindrome.callCount).to.be.above(1), 0);
       palindrome = originalPalindrome;
     });
 
   });
-
-
-
-
 
   describe('12. Multiply', function() {
 
@@ -411,15 +390,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalMultiply = multiply;
       multiply = sinon.spy(multiply);
       multiply(8,4);
-      expect(multiply.callCount).to.be.above(1);
+      setTimeout(() => expect(multiply.callCount).to.be.above(1), 0);
       multiply = originalMultiply;
     });
 
   });
-
-
-
-
 
   describe('15. Compare Strings', function() {
 
@@ -442,13 +417,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalCompareStr = compareStr;
       compareStr = sinon.spy(compareStr);
       compareStr('house', 'houses');
-      expect(compareStr.callCount).to.be.above(1);
+      setTimeout(() => expect(compareStr.callCount).to.be.above(1), 0);
       compareStr = originalCompareStr;
     });
 
   });
-
-
 
   describe('16. Create array from string', function() {
 
@@ -467,13 +440,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalCreateArray = createArray;
       createArray = sinon.spy(createArray);
       createArray('hello');
-      expect(createArray.callCount).to.be.above(1);
+      setTimeout(() => expect(createArray.callCount).to.be.above(1), 0);
       createArray = originalCreateArray;
     });
 
   });
-
-
 
   describe('17. Reverse an array', function() {
 
@@ -492,13 +463,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalReverseArr = reverseArr;
       reverseArr = sinon.spy(reverseArr);
       reverseArr([5,4,3,2,1]);
-      expect(reverseArr.callCount).to.be.above(1);
+      setTimeout(() => expect(reverseArr.callCount).to.be.above(1), 0);
       reverseArr = originalReverseArr;
     });
 
   });
-
-
 
   describe('18. Build an array with a given value and length', function() {
 
@@ -521,7 +490,7 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalBuildList = buildList;
       buildList = sinon.spy(buildList);
       buildList(2,7);
-      expect(buildList.callCount).to.be.above(1);
+      setTimeout(() => expect(buildList.callCount).to.be.above(1), 0);
       buildList = originalBuildList;
     });
 
@@ -551,13 +520,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalCountOccurrence = countOccurrence;
       countOccurrence = sinon.spy(countOccurrence);
       countOccurrence([2,7,4,4,1,4], 4);
-      expect(countOccurrence.callCount).to.be.above(1);
+      setTimeout(() => expect(countOccurrence.callCount).to.be.above(1), 0);
       countOccurrence = originalCountOccurrence;
     });
 
   });
-
-
 
   describe('20. Recursive Map', function() {
 
@@ -568,8 +535,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       expect(Array.isArray(rMap([1,2,3], timesTwo))).to.equal(true);
     });
 
-    checkForNativeMethods(function() {
+    it('should not use the native version of map', function () {
+      sinon.spy(Array.prototype, 'map');
       rMap([1,2,3,4], timesTwo);
+      expect(Array.prototype.map.called).to.equal(false);
+      Array.prototype.map.restore();
     });
 
     it('should return new array without mutating the input array', function() {
@@ -588,13 +558,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalrMap = rMap;
       rMap = sinon.spy(rMap);
       rMap([1,2,3,4], timesTwo);
-      expect(rMap.callCount).to.be.above(1);
+      setTimeout(() => expect(rMap.callCount).to.be.above(1), 0);
       rMap = originalrMap;
     });
 
   });
-
-
 
   describe('25. Return nth Fibonacci', function() {
 
@@ -621,13 +589,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalNthFibo = nthFibo;
       nthFibo = sinon.spy(nthFibo);
       nthFibo(5);
-      expect(nthFibo.callCount).to.be.above(1);
+      setTimeout(() => expect(nthFibo.callCount).to.be.above(1), 0);
       nthFibo = originalNthFibo;
     });
 
   });
-
-
 
   describe('26. Capitalize words in array', function() {
 
@@ -644,13 +610,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalCapitalizeWords = capitalizeWords;
       capitalizeWords = sinon.spy(capitalizeWords);
       capitalizeWords(["ceci","n'est","pas","une","pipe"]);
-      expect(capitalizeWords.callCount).to.be.above(1);
+      setTimeout(() => expect(capitalizeWords.callCount).to.be.above(1), 0);
       capitalizeWords = originalCapitalizeWords;
     });
 
   });
-
-
 
   describe('27. Capitalize first letter of words in array', function() {
 
@@ -667,15 +631,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalCapitalizeFirst = capitalizeFirst;
       capitalizeFirst = sinon.spy(capitalizeFirst);
       capitalizeFirst(["ceci","n'est","pas","une","pipe"]);
-      expect(capitalizeFirst.callCount).to.be.above(1);
+      setTimeout(() => expect(capitalizeFirst.callCount).to.be.above(1), 0);
       capitalizeFirst = originalCapitalizeFirst;
     });
 
   });
-
-
-
-
 
   describe('30. Tally letters in string', function() {
 
@@ -702,13 +662,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalLetterTally = letterTally;
       letterTally = sinon.spy(letterTally);
       letterTally('invasion');
-      expect(letterTally.callCount).to.be.above(1);
+      setTimeout(() => expect(letterTally.callCount).to.be.above(1), 0);
       letterTally = originalLetterTally;
     });
 
   });
-
-
 
   describe('31. Eliminate consecutive duplicates', function() {
     var input1 = [1,2,2,3,4,4,5,5,5];
@@ -727,14 +685,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalCompress = compress;
       compress = sinon.spy(compress);
       compress(input2);
-      expect(compress.callCount).to.be.above(1);
+      setTimeout(() => expect(compress.callCount).to.be.above(1), 0);
       compress = originalCompress;
     });
 
   });
-
-
-
 
   describe('33. Minimize zeroes', function() {
     var input1 = [2,0,0,0,1,4];
@@ -753,13 +708,11 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalMinZeroes = minimizeZeroes;
       minimizeZeroes = sinon.spy(minimizeZeroes);
       minimizeZeroes(input1);
-      expect(minimizeZeroes.callCount).to.be.above(1);
+      setTimeout(() => expect(minimizeZeroes.callCount).to.be.above(1), 0);
       minimizeZeroes = originalMinZeroes;
     });
 
   });
-
-
 
   describe('34. Alternate sign', function() {
     var input1 = [2,7,8,3,1,4];
@@ -778,41 +731,10 @@ describe('Exercises in Recursion in Recursion in Recursion in...', function() {
       var originalAltSign = alternateSign;
       alternateSign = sinon.spy(alternateSign);
       alternateSign(input1);
-      expect(alternateSign.callCount).to.be.above(1);
+      setTimeout(() => expect(alternateSign.callCount).to.be.above(1), 0);
       alternateSign = originalAltSign;
     });
 
   });
 
-
-
-  xdescribe('35. Convert numbers to text', function() {
-
-    it('should return a string', function() {
-      expect(typeof(numToText("I have 5 dogs and 6 ponies"))).to.equal('string');
-    });
-
-    it('should convert single digits to their word equivalent', function() {
-      expect(numToText("I have 5 dogs and 6 ponies")).to.eql("I have five dogs and six ponies");
-      expect(numToText("It takes 3 men to screw in 1 light bulb")).to.eql("It takes three men to screw in one light bulb");
-    });
-
-    it('should use recursion by calling self', function () {
-      var originalNumToText = numToText;
-      numToText = sinon.spy(numToText);
-      numToText("I have 5 dogs and 6 ponies");
-      expect(numToText.callCount).to.be.above(1);
-      numToText = originalNumToText;
-    });
-
-  });
 });
-
-function checkForNativeMethods(runFunction) {
-  it('should not use the native version of map', function() {
-    // These spies are set up in testSupport.js
-    runFunction();
-    expect(Array.prototype.map.called).to.equal(false);
-  });
-}
-
