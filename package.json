@@ -1,0 +1,29 @@
+{
+  "name": "recursion-prompts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Repository of prompts to be solved using recursion",
+  "main": "src/recursion.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "mocha ./test || :",
+    "xposttest": "rm -rf ./test ./node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OperationSpark/recursion-prompts.git"
+  },
+  "author": "JS-Challenges",
+  "license": "CC",
+  "homepage": "https://github.com/OperationSpark/recursion-prompts",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "lodash": "^4.17.4",
+    "mocha": "^3.4.1",
+    "sinon": "^2.2.0"
+  }
+}
