@@ -234,3 +234,51 @@ var binarySearch = function(array, target, min, max) {
 // Sample output: [5,7,23,32,34,62]
 var mergeSort = function(array) {
 };
+
+////////////////////////////////////////////////////////////////////////////////
+// DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+if ((typeof process !== 'undefined') &&
+  (typeof process.versions.node !== 'undefined')) {
+  module.exports = {
+    factorial,
+    sum,
+    arraySum,
+    isEven,
+    sumBelow,
+    range,
+    exponent,
+    powerOfTwo,
+    reverse,
+    palindrome,
+    modulo,
+    multiply,
+    divide,
+    gcd,
+    compareStr,
+    createArray,
+    reverseArr,
+    buildList,
+    countOccurrence,
+    rMap,
+    countKeysInObj,
+    countValuesInObj,
+    replaceKeysInObj,
+    fibonacci,
+    nthFibo,
+    capitalizeWords,
+    capitalizeFirst,
+    nestedEvenSum,
+    flatten,
+    letterTally,
+    compress,
+    augmentElements,
+    minimizeZeroes,
+    alternateSign,
+    numToText,
+    tagCount,
+    binarySearch,
+    mergeSort,
+  };
+};
