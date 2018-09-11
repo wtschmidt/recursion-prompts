@@ -191,7 +191,7 @@ var letterTally = function(str, obj) {
 var compress = function(list) {
 };
 
-// 32. Augument every element in a list with a new value where each element is an array
+// 32. Augment every element in a list with a new value where each element is an array
 // itself.
 // Example: augmentElements([[],[3],[7]], 5); // [[5],[3,5],[7,5]]
 var augmentElements = function(array, aug) {
@@ -234,3 +234,40 @@ var binarySearch = function(array, target, min, max) {
 // Sample output: [5,7,23,32,34,62]
 var mergeSort = function(array) {
 };
+
+
+
+//-----------------------------------
+// DON'T REMOVE THIS CODE -----------
+//-----------------------------------
+
+if ((typeof process !== 'undefined') &&
+    (typeof process.versions.node !== 'undefined')) {
+    module.exports = {
+        factorial,
+        sum,
+        isEven,
+        sumBelow,
+        range,
+        exponent,
+        powerOfTwo,
+        reverse,
+        palindrome,
+        multiply,
+        compareStr,
+        createArray,
+        reverseArr,
+        buildList,
+        countOccurrence,
+        rMap,
+        nthFibo,
+        capitalizeWords,
+        capitalizeFirst,
+        letterTally,
+        compress,
+        minimizeZeroes,
+        alternateSign,
+    };
+}
+
+//-----------------------------------
