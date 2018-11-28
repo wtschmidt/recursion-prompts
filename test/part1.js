@@ -104,8 +104,6 @@
 
     });
 
-
-
     describe('2. Sum of Integers', function() {
 
       it('should return a number', function() {
@@ -154,58 +152,6 @@
 
     });
 
-
-
-    xdescribe('3. Sum Integers in Array', function() {
-
-      it('should return a number', function() {
-        expect(typeof(arraySum([[1],[2,3],[[4]],5,6]))).to.eql('number');
-      });
-
-      it('should return the sum of an array with nested arrays of non-negative integers', function() {
-        expect(arraySum([[1],[2,3],[[4]],5,6])).to.eql(21);
-        expect(arraySum([[12,[[34],[56]],78]])).to.eql(180);
-        expect(arraySum([3,[0,[34,[7,[18]]]]])).to.eql(62);
-      });
-
-      it('should return the sum of an array with nested arrays of negative integers', function() {
-        expect(arraySum([[-1],[-2,-3],[[-4]],-5,-6])).to.eql(-21);
-        expect(arraySum([[-12,[[-34],[-56]],-78]])).to.eql(-180);
-        expect(arraySum([-3,[0,[-34,[-7,[-18]]]]])).to.eql(-62);
-      });
-
-      it('should return the sum of an array with nested arrays of mixed non-negative and negative integers', function() {
-        expect(arraySum([[1],[-2,3],[[-4]],5,-6])).to.eql(-3);
-        expect(arraySum([[-12,[[34],[-56]],78]])).to.eql(44);
-        expect(arraySum([3,[0,[-34,[-7,[18]]]]])).to.eql(-20);
-      });
-
-      it('should return 0 for empty array', function() {
-        expect(arraySum([])).to.eql(0);
-      });
-
-      it('should accept an array with a single integer', function() {
-        expect(arraySum([4])).to.eql(4);
-        expect(arraySum([0])).to.eql(0);
-        expect(arraySum([-37])).to.eql(-37);
-      });
-
-      it('should not mutate the input array', function() {
-        var input = [[1],[2,3],[[4]],5,6];
-        var result = arraySum(input);
-        expect(input).to.eql([[1],[2,3],[[4]],5,6]);
-      });
-
-      it('should use recursion by calling self', function () {
-        arraySum.proxyCallCount = 0;
-        arraySum([[1],[2,3],[[4]],5,6]);
-        expect(arraySum.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
-
     describe('4. Check if Even', function() {
 
       it('should return a boolean', function() {
@@ -245,8 +191,6 @@
 
     });
 
-
-
     describe('5. Sum Below', function() {
 
       it('should return a number', function() {
@@ -277,8 +221,6 @@
       });
 
     });
-
-
 
     describe('6. Integer Range', function() {
 
@@ -316,8 +258,6 @@
       });
 
     });
-
-
 
     describe('7. Compute Exponent', function() {
 
@@ -366,8 +306,6 @@
 
     });
 
-
-
     describe('8. Power of Two', function() {
 
       it('should return a boolean', function() {
@@ -391,8 +329,6 @@
       });
 
     });
-
-
 
     describe('9. Reverse String', function() {
 
@@ -420,8 +356,6 @@
       });
 
     });
-
-
 
     describe('10. Palindrome', function() {
 
@@ -456,44 +390,6 @@
 
     });
 
-
-
-    xdescribe('11. Modulo', function() {
-
-      it('should return a number', function() {
-        expect(typeof(modulo(5,2))).to.equal('number');
-        expect(typeof(modulo(8,4))).to.equal('number');
-      });
-
-      it("should not use complex math", function() {
-        expect(modulo.toString()).to.not.contain('*');
-        expect(modulo.toString()).to.not.contain('/');
-        expect(modulo.toString()).to.not.contain('%');
-        expect(modulo.toString()).to.not.contain('Math');
-      });
-
-      it('should return the remainder of two integers', function() {
-        expect(modulo(2, 1)).to.equal(2 % 1);
-        expect(modulo(17, 5)).to.equal(17 % 5);
-        expect(modulo(78, 453)).to.equal(78 % 453);
-        expect(modulo(-79, 82)).to.equal(-79 % 82);
-        expect(modulo(-275, -502)).to.equal(-275 % -502);
-        expect(modulo(-275, -274)).to.equal(-275 % -274);
-        expect(modulo(-4, 2)).to.equal(-4 % 2);
-        expect(modulo(0, 32)).to.equal(0 % 32);
-        expect(modulo(0, 0).toString()).to.equal('NaN');
-      });
-
-      it('should use recursion by calling self', function () {
-        modulo.proxyCallCount = 0;
-        modulo(5,2);
-        expect(modulo.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
-
     describe('12. Multiply', function() {
 
       it('should return a number', function() {
@@ -526,79 +422,6 @@
 
     });
 
-
-
-    xdescribe('13. Divide', function() {
-
-      it('should return a number', function() {
-        expect(typeof(divide(5,2))).to.equal('number');
-        expect(typeof(divide(8,4))).to.equal('number');
-      });
-
-      it("should not use complex math", function() {
-        expect(divide.toString()).to.not.contain('*');
-        expect(divide.toString()).to.not.contain('/');
-        expect(divide.toString()).to.not.contain('%');
-        expect(divide.toString()).to.not.contain('Math');
-      });
-
-      it('should return the quotient of two integers', function() {
-        expect(divide(2, 1)).to.equal(~~(2 / 1));
-        expect(divide(17, 5)).to.equal(~~(17 / 5));
-        expect(divide(78, 453)).to.equal(~~(78 / 453));
-        expect(divide(-79, 82)).to.equal(~~(-79 / 82));
-        expect(divide(-275, -582)).to.equal(~~(-275 / -582));
-        expect(divide(0, 32)).to.equal(~~(0 / 32));
-        expect(divide(0, 0).toString()).to.equal('NaN');
-      });
-
-      it('should use recursion by calling self', function () {
-        divide.proxyCallCount = 0;
-        divide(17, 5);
-        expect(divide.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
-
-    xdescribe('14. Greatest Common Divisor', function() {
-
-      it('should return a number', function() {
-        expect(typeof(gcd(4,36))).to.equal('number');
-      });
-
-      it('should return greatest common divisor of two positive integers', function() {
-        expect(gcd(4,36)).to.equal(4);
-        expect(gcd(24,88)).to.equal(8);
-        expect(gcd(339,17)).to.equal(1);
-        expect(gcd(126,900)).to.equal(18);
-      });
-
-      it('should return null for negative integers', function() {
-        expect(gcd(-4, 2)).to.equal(null);
-        expect(gcd(-5, 5)).to.equal(null);
-        expect(gcd(5, -5)).to.equal(null);
-        expect(gcd(7, -36)).to.equal(null);
-        expect(gcd(-10, -58)).to.equal(null);
-        expect(gcd(-92, -5)).to.equal(null);
-        // expect(gcd(0, 0)).to.equal(null);
-        // expect(gcd(0, 5)).to.equal(null);
-        // expect(gcd(5, 0)).to.equal(null);
-        // expect(gcd(-5, 0)).to.equal(null);
-        // expect(gcd(0, -5)).to.equal(null);
-      });
-
-      it('should use recursion by calling self', function () {
-        gcd.proxyCallCount = 0;
-        gcd(17, 5);
-        expect(gcd.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
-
     describe('15. Compare Strings', function() {
 
       it('should return a boolean', function() {
@@ -624,8 +447,6 @@
 
     });
 
-
-
     describe('16. Create array from string', function() {
 
       it('should return an array', function() {
@@ -647,8 +468,6 @@
 
     });
 
-
-
     describe('17. Reverse an array', function() {
 
       it('should return an array', function() {
@@ -669,8 +488,6 @@
       });
 
     });
-
-
 
     describe('18. Build an array with a given value and length', function() {
 
@@ -697,8 +514,6 @@
 
     });
 
-
-
     describe('19. Count value in array', function() {
 
       it('should return a number', function() {
@@ -724,8 +539,6 @@
       });
 
     });
-
-
 
     describe('20. Recursive Map', function() {
 
@@ -760,156 +573,6 @@
 
     });
 
-
-
-    xdescribe('21. Count key in object', function() {
-      var input = {'e': {'x':'y'}, 't':{'r': {'e':'r'}, 'p': {'y':'r'}},'y':'e'};
-
-      it('should return a number', function() {
-        expect(typeof(countKeysInObj(input, 'r'))).to.equal('number');
-        expect(typeof(countKeysInObj(input, 'e'))).to.equal('number');
-        expect(typeof(countKeysInObj(input, 'p'))).to.equal('number');
-      });
-
-      it('should return the number of occurrences of the property', function() {
-        expect(countKeysInObj(input, 'e')).to.eql(2);
-        expect(countKeysInObj(input, 'x')).to.eql(1);
-        expect(countKeysInObj(input, 'y')).to.eql(2);
-        expect(countKeysInObj(input, 't')).to.eql(1);
-        expect(countKeysInObj(input, 'r')).to.eql(1);
-        expect(countKeysInObj(input, 'p')).to.eql(1);
-      });
-
-      it('should use recursion by calling self', function () {
-        countKeysInObj.proxyCallCount = 0;
-        countKeysInObj(input, 'e');
-        expect(countKeysInObj.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
-
-    xdescribe('22. Count value in object', function() {
-      var input = {'e': {'x':'y'}, 't':{'r': {'e':'r'}, 'p': {'y':'r'}},'y':'e'};
-
-      it('should return a number', function() {
-        expect(typeof(countValuesInObj(input, 'r'))).to.equal('number');
-        expect(typeof(countValuesInObj(input, 'e'))).to.equal('number');
-        expect(typeof(countValuesInObj(input, 'p'))).to.equal('number');
-      });
-
-      it('should return the count of the occurrences of the property', function() {
-        expect(countValuesInObj(input, 'e')).to.eql(1);
-        expect(countValuesInObj(input, 'x')).to.eql(0);
-        expect(countValuesInObj(input, 'y')).to.eql(1);
-        expect(countValuesInObj(input, 't')).to.eql(0);
-        expect(countValuesInObj(input, 'r')).to.eql(2);
-        expect(countValuesInObj(input, 'p')).to.eql(0);
-      });
-
-      it('should use recursion by calling self', function () {
-        countValuesInObj.proxyCallCount = 0;
-        countValuesInObj(input, 'r');
-        expect(countValuesInObj.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
-
-    xdescribe('23. Replace keys in object', function() {
-
-      var tallyKeys = function(obj) {
-        var count = 0;
-        for (var k in obj) {
-          if (typeof obj[k] === 'object') {
-            count += tallyKeys(obj[k]);
-          }
-          count++;
-        }
-        return count;
-      };
-
-      it('should return an object', function() {
-        var input = {'e': {'x':'y'}, 't':{'r': {'e':'r'}, 'p': {'y':'r'}},'y':'e'};
-        expect(typeof(replaceKeysInObj(input, 'r', 'a'))).to.equal('object');
-        expect(typeof(replaceKeysInObj(input, 'e', 0))).to.equal('object');
-      });
-
-      it('should return object containing renamed keys', function() {
-        var input  = {'e': {'x':'y'}, 't':{'r': {'e':'r'}, 'p': {'y':'r'}}, 'y':'e'};
-        var output = replaceKeysInObj(input, 'e', 'f');
-
-        expect(output.e).to.equal(undefined);
-        expect(output.f.x).to.equal('y');
-        expect(output.t.r.e).to.equal(undefined);
-        expect(output.t.r.f).to.equal('r');
-        expect(output.t.p.y).to.equal('r');
-        expect(output.y).to.equal('e');
-
-        expect(output.hasOwnProperty('e')).to.equal(false);
-        expect(output.hasOwnProperty('f')).to.equal(true);
-        expect(output.hasOwnProperty('t')).to.equal(true);
-        expect(output.hasOwnProperty('y')).to.equal(true);
-
-        expect(output.t.hasOwnProperty('r')).to.equal(true);
-        expect(output.t.hasOwnProperty('p')).to.equal(true);
-
-        expect(output.t.r.hasOwnProperty('e')).to.equal(false);
-        expect(output.t.r.hasOwnProperty('f')).to.equal(true);
-        expect(output.t.p.hasOwnProperty('y')).to.equal(true);
-      });
-
-      it('should return object with same number of keys', function () {
-        var input  = {'e': {'x':'y'}, 't':{'r': {'e':'r'}, 'p': {'y':'r'}}, 'y':'e'};
-        var output1 = replaceKeysInObj(input, 'e', 'f');
-        var output2 = replaceKeysInObj(output1, 'e', 'f');
-        expect(tallyKeys(input)).to.equal(8);
-        expect(tallyKeys(output1)).to.equal(8);
-        expect(tallyKeys(output2)).to.equal(8);
-      });
-
-      it('should use recursion by calling self', function () {
-        var input = {'e': {'x':'y'}, 't':{'r': {'e':'r'}, 'p': {'y':'r'}},'y':'e'};
-        replaceKeysInObj.proxyCallCount = 0;
-        replaceKeysInObj(input, 'r', 'a');
-        expect(replaceKeysInObj.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
-    xdescribe('24. First n Fibonacci', function() {
-
-      it('should return an array', function() {
-        expect(Array.isArray(fibonacci(5))).to.equal(true);
-      });
-
-      it('should return first n Fibonacci numbers where n starts at index 1', function() {
-        expect(fibonacci(1)).to.eql([0, 1]);
-        expect(fibonacci(2)).to.eql([0, 1, 1]);
-        expect(fibonacci(3)).to.eql([0, 1, 1, 2]);
-        expect(fibonacci(4)).to.eql([0, 1, 1, 2, 3]);
-        expect(fibonacci(5)).to.eql([0, 1, 1, 2, 3, 5]);
-        expect(fibonacci(12)).to.eql([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]);
-      });
-
-      it('should return null for zero and negative integers', function() {
-        expect(fibonacci(0)).to.equal(null);
-        expect(fibonacci(-7)).to.equal(null);
-      });
-
-      it('should use recursion by calling self', function () {
-        fibonacci.proxyCallCount = 0;
-        fibonacci(5);
-        expect(fibonacci.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
-
     describe('25. Return nth Fibonacci', function() {
 
       it('should return a number', function() {
@@ -939,8 +602,6 @@
 
     });
 
-
-
     describe('26. Capitalize words in array', function() {
 
       it('should return an array', function() {
@@ -960,8 +621,6 @@
 
     });
 
-
-
     describe('27. Capitalize first letter of words in array', function() {
 
       it('should return an array', function() {
@@ -980,58 +639,6 @@
       });
 
     });
-
-
-
-    xdescribe('28. Sum even numbers in nested objects', function() {
-      var obj = {
-        a: 2,
-        b: {b: 2, bb: {b: 3, bb: {b: 2}}},
-        c: {c: {c: 2}, cc: 'ball', ccc: 5},
-        d: 1,
-        e: {e: {e: 2}, ee: 'car'}
-      };
-
-      it('should return a number', function() {
-        expect(typeof(nestedEvenSum(obj))).to.equal('number');
-      });
-
-      it('should sum even numbers', function() {
-        expect(nestedEvenSum(obj)).to.eql(10);
-      });
-
-      it('should use recursion by calling self', function () {
-        nestedEvenSum.proxyCallCount = 0;
-        nestedEvenSum(obj);
-        expect(nestedEvenSum.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
-
-    xdescribe('29. Flatten nested arrays', function() {
-
-      it('should return an array', function() {
-        expect(Array.isArray(flatten([1,[2],[3,[[4]]],5]))).to.equal(true);
-      });
-
-      it('should return flattened array', function() {
-        expect(flatten([[1],[2,3],[[4]],5,6])).to.eql([1,2,3,4,5,6]);
-        expect(flatten([[12,[[34],[56]],78]])).to.eql([12,34,56,78]);
-        expect(flatten([3,[0,[34,[7,[18]]]]])).to.eql([3,0,34,7,18]);
-        expect(flatten([[1],[2,[],3],[],[[4]],5,6])).to.eql([1,2,3,4,5,6]);
-      });
-
-      it('should use recursion by calling self', function () {
-        flatten.proxyCallCount = 0;
-        flatten([3,[0,[34,[7,[18]]]]]);
-        expect(flatten.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
 
     describe('30. Tally letters in string', function() {
 
@@ -1062,8 +669,6 @@
 
     });
 
-
-
     describe('31. Eliminate consecutive duplicates', function() {
       var input1 = [1,2,2,3,4,4,5,5,5];
       var input2 = [1,2,2,3,4,4,2,5,5,5,4,4];
@@ -1084,30 +689,6 @@
       });
 
     });
-
-
-
-    xdescribe('32. Augment each element in nested arrays', function() {
-
-      it('should return an array', function() {
-        expect(Array.isArray(augmentElements([[],[3],[7]], 5))).to.equal(true);
-      });
-
-      it('should augment each element with given value', function() {
-        expect(augmentElements([[],[3],[7]], 5)).to.eql([[5],[3,5],[7,5]]);
-        expect(augmentElements([[],[3],[7]], null)).to.eql([[null],[3,null],[7,null]]);
-        expect(augmentElements([[],[3],[7]], '')).to.eql([[''],[3,''],[7,'']]);
-      });
-
-      it('should use recursion by calling self', function () {
-        augmentElements.proxyCallCount = 0;
-        augmentElements([[],[3],[7]], 5);
-        expect(augmentElements.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
-
 
     describe('33. Minimize zeroes', function() {
       var input1 = [2,0,0,0,1,4];
@@ -1130,8 +711,6 @@
 
     });
 
-
-
     describe('34. Alternate sign', function() {
       var input1 = [2,7,8,3,1,4];
       var input2 = [-2,-7,8,3,-1,4];
@@ -1152,28 +731,6 @@
       });
 
     });
-
-
-
-    xdescribe('35. Convert numbers to text', function() {
-
-      it('should return a string', function() {
-        expect(typeof(numToText("I have 5 dogs and 6 ponies"))).to.equal('string');
-      });
-
-      it('should convert single digits to their word equivalent', function() {
-        expect(numToText("I have 5 dogs and 6 ponies")).to.eql("I have five dogs and six ponies");
-        expect(numToText("It takes 3 men to screw in 1 light bulb")).to.eql("It takes three men to screw in one light bulb");
-      });
-
-      it('should use recursion by calling self', function () {
-        numToText.proxyCallCount = 0;
-        numToText("I have 5 dogs and 6 ponies");
-        expect(numToText.proxyCallCount).to.be.above(1);
-      });
-
-    });
-
   });
 
   function checkForNativeMethods(runFunction) {
@@ -1183,5 +740,4 @@
       expect(Array.prototype.map.called).to.equal(false);
     });
   }
-
 }());
