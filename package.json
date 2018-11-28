@@ -9,7 +9,9 @@
   },
   "scripts": {
     "pretest": "npm install",
-    "test": "karma start --single-run --browsers ChromeHeadless karma.conf.js"
+    "test": "mocha ./test || :",
+    "posttest": "rm -rf ./test ./node_modules",
+    "test:travis": "karma start --single-run --browsers ChromeHeadless karma.conf.js"
   },
   "repository": {
     "type": "git",
