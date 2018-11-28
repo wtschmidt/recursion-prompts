@@ -14,6 +14,6 @@ before_install:
 install:
   - yarn
 script:
-  - yarn test
+  - yarn test:travis
 notifications:
   webhooks: https://greenlight.operationspark.org/api/v2/webhooks/travisci
