@@ -1,5 +1,5 @@
 # Recursion Prompts
-- This is a repository of prompts to be solved using recursion
+- This is a repository of prompts to be solved using recursion inside of `src/recursion.js`
 - Please refrain from sharing solutions
 - Try to solve prompts first using pseudocode
 - This repo requires that the overall function itself is called recursively and pays no attention to subroutines called recursively.
