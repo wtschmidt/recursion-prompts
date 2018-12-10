@@ -9,6 +9,6 @@ cache:
 install:
   - yarn
 script:
-  - yarn test:travis
+  - yarn test
 notifications:
   webhooks: https://greenlight.operationspark.org/api/v2/webhooks/travisci
