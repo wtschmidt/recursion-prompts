@@ -8,10 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "pretest": "npm install",
-    "test": "mocha ./test || :",
-    "posttest": "rm -rf ./test ./node_modules",
-    "test:travis": "mocha ./test --reporter spec"
+    "test": "mocha ./test --reporter spec"
   },
   "repository": {
     "type": "git",
