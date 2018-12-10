@@ -8,8 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "pretest": "npm install",
-    "test": "karma start --single-run --browsers ChromeHeadless karma.conf.js"
+    "test": "mocha ./test --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -21,20 +20,9 @@
     "url": "https://github.com/OperationSpark/recursion-prompts/issues"
   },
   "homepage": "https://github.com/OperationSpark/recursion-prompts#readme",
-  "devDependencies": {
+  "dependencies": {
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
-    "sinon": "^5.0.10",
-    "karma": "^1.7.1",
-    "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-mocha": "^1.3.0",
-    "puppeteer": "^0.11.0"
-  },
-  "dependencies": {
-    "karma-sinon": "^1.0.5",
-    "karma-sinon-chai": "^1.3.2",
-    "sinon": "^4.0.1",
-    "sinon-chai": "^2.14.0"
+    "sinon": "^5.0.10"
   }
 }

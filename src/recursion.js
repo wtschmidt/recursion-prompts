@@ -242,32 +242,126 @@ var mergeSort = function(array) {
 //-----------------------------------
 
 if ((typeof process !== 'undefined') &&
-    (typeof process.versions.node !== 'undefined')) {
-    module.exports = {
-        factorial,
-        sum,
-        isEven,
-        sumBelow,
-        range,
-        exponent,
-        powerOfTwo,
-        reverse,
-        palindrome,
-        multiply,
-        compareStr,
-        createArray,
-        reverseArr,
-        buildList,
-        countOccurrence,
-        rMap,
-        nthFibo,
-        capitalizeWords,
-        capitalizeFirst,
-        letterTally,
-        compress,
-        minimizeZeroes,
-        alternateSign,
+  (typeof process.versions.node !== 'undefined')) {
+
+  /**
+   * Due to some node-related issues with spying on recursive functions,
+   * it isn't possible to test them with sinon spies like so:
+   *
+   *   var originalSum = sum;
+   *   sum = sinon.spy(sum);
+   *
+   *   sum([1, 2, 3, 4, 5, 6]);
+   *
+   *   // callCount will always 1 causing, this test to always fail in node :(
+   *   expect(sum.callCount).to.be.above(1);
+   *
+   *   sum = originalSum;
+   *
+   * However, we can work around this by using proxies!
+   * If you reassign the function to a proxy and use the `apply` trap,
+   * you can make a `proxyCallCount` property on the function,
+   * increment it each time it's called, and then test that instead.
+   *
+   *   sum.proxyCallCount = 0;
+   *   sum([1, 2, 3, 4, 5, 6]);
+   *   expect(sum.proxyCallCount).to.be.above(1);
+   *
+   * MDN Proxies: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
+   * MDN Proxy Apply Trap: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
+   */
+  const createSpyProxy = (func) => {
+    func.toString = func.toString.bind(func);
+
+    const recursiveFunctionCallCounterHandler = {
+      apply(target, thisArg, args) {
+        target.proxyCallCount = target.proxyCallCount ? target.proxyCallCount + 1 : 1;
+        return target.apply(thisArg, args);
+      },
     };
+
+    return new Proxy(func, recursiveFunctionCallCounterHandler);
+  };
+
+  factorial = createSpyProxy(factorial);
+  sum = createSpyProxy(sum);
+  arraySum = createSpyProxy(arraySum);
+  isEven = createSpyProxy(isEven);
+  sumBelow = createSpyProxy(sumBelow);
+  range = createSpyProxy(range);
+  exponent = createSpyProxy(exponent);
+  powerOfTwo = createSpyProxy(powerOfTwo);
+  reverse = createSpyProxy(reverse);
+  palindrome = createSpyProxy(palindrome);
+  modulo = createSpyProxy(modulo);
+  multiply = createSpyProxy(multiply);
+  divide = createSpyProxy(divide);
+  gcd = createSpyProxy(gcd);
+  compareStr = createSpyProxy(compareStr);
+  createArray = createSpyProxy(createArray);
+  reverseArr = createSpyProxy(reverseArr);
+  buildList = createSpyProxy(buildList);
+  countOccurrence = createSpyProxy(countOccurrence);
+  rMap = createSpyProxy(rMap);
+  countKeysInObj = createSpyProxy(countKeysInObj);
+  countValuesInObj = createSpyProxy(countValuesInObj);
+  replaceKeysInObj = createSpyProxy(replaceKeysInObj);
+  fibonacci = createSpyProxy(fibonacci);
+  nthFibo = createSpyProxy(nthFibo);
+  capitalizeWords = createSpyProxy(capitalizeWords);
+  capitalizeFirst = createSpyProxy(capitalizeFirst);
+  nestedEvenSum = createSpyProxy(nestedEvenSum);
+  flatten = createSpyProxy(flatten);
+  letterTally = createSpyProxy(letterTally);
+  compress = createSpyProxy(compress);
+  augmentElements = createSpyProxy(augmentElements);
+  minimizeZeroes = createSpyProxy(minimizeZeroes);
+  alternateSign = createSpyProxy(alternateSign);
+  numToText = createSpyProxy(numToText);
+  tagCount = createSpyProxy(tagCount);
+  binarySearch = createSpyProxy(binarySearch);
+  mergeSort = createSpyProxy(mergeSort);
+
+  module.exports = {
+    factorial,
+    sum,
+    arraySum,
+    isEven,
+    sumBelow,
+    range,
+    exponent,
+    powerOfTwo,
+    reverse,
+    palindrome,
+    modulo,
+    multiply,
+    divide,
+    gcd,
+    compareStr,
+    createArray,
+    reverseArr,
+    buildList,
+    countOccurrence,
+    rMap,
+    countKeysInObj,
+    countValuesInObj,
+    replaceKeysInObj,
+    fibonacci,
+    nthFibo,
+    capitalizeWords,
+    capitalizeFirst,
+    nestedEvenSum,
+    flatten,
+    letterTally,
+    compress,
+    augmentElements,
+    minimizeZeroes,
+    alternateSign,
+    numToText,
+    tagCount,
+    binarySearch,
+    mergeSort,
+  };
 }
 
 //-----------------------------------
