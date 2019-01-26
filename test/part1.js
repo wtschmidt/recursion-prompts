@@ -2,47 +2,47 @@
   'use strict';
 
   const sinon = require('sinon');
-  const { expect } = require('chai');
-  const {
-    factorial,
-    sum,
-    arraySum,
-    isEven,
-    sumBelow,
-    range,
-    exponent,
-    powerOfTwo,
-    reverse,
-    palindrome,
-    modulo,
-    multiply,
-    divide,
-    gcd,
-    compareStr,
-    createArray,
-    reverseArr,
-    buildList,
-    countOccurrence,
-    rMap,
-    countKeysInObj,
-    countValuesInObj,
-    replaceKeysInObj,
-    fibonacci,
-    nthFibo,
-    capitalizeWords,
-    capitalizeFirst,
-    nestedEvenSum,
-    flatten,
-    letterTally,
-    compress,
-    augmentElements,
-    minimizeZeroes,
-    alternateSign,
-    numToText,
-    tagCount,
-    binarySearch,
-    mergeSort,
-  } = require('../src/recursion');
+  const expect = require('chai').expect;
+  const functions = require('../src/recursion');
+
+  const factorial = functions.factorial;
+  const sum = functions.sum;
+  const arraySum = functions.arraySum;
+  const isEven = functions.isEven;
+  const sumBelow = functions.sumBelow;
+  const range = functions.range;
+  const exponent = functions.exponent;
+  const powerOfTwo = functions.powerOfTwo;
+  const reverse = functions.reverse;
+  const palindrome = functions.palindrome;
+  const modulo = functions.modulo;
+  const multiply = functions.multiply;
+  const divide = functions.divide;
+  const gcd = functions.gcd;
+  const compareStr = functions.compareStr;
+  const createArray = functions.createArray;
+  const reverseArr = functions.reverseArr;
+  const buildList = functions.buildList;
+  const countOccurrence = functions.countOccurrence;
+  const rMap = functions.rMap;
+  const countKeysInObj = functions.countKeysInObj;
+  const countValuesInObj = functions.countValuesInObj;
+  const replaceKeysInObj = functions.replaceKeysInObj;
+  const fibonacci = functions.fibonacci;
+  const nthFibo = functions.nthFibo;
+  const capitalizeWords = functions.capitalizeWords;
+  const capitalizeFirst = functions.capitalizeFirst;
+  const nestedEvenSum = functions.nestedEvenSum;
+  const flatten = functions.flatten;
+  const letterTally = functions.letterTally;
+  const compress = functions.compress;
+  const augmentElements = functions.augmentElements;
+  const minimizeZeroes = functions.minimizeZeroes;
+  const alternateSign = functions.alternateSign;
+  const numToText = functions.numToText;
+  const tagCount = functions.tagCount;
+  const binarySearch = functions.binarySearch;
+  const mergeSort = functions.mergeSort;
 
   describe('Exercises in Recursion in Recursion in Recursion in...', function() {
 
