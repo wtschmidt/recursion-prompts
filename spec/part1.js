@@ -1147,7 +1147,7 @@
 
 
 
-    xdescribe('35. Convert numbers to text', function() {
+    describe('35. Convert numbers to text', function() {
 
       it('should return a string', function() {
         expect(typeof(numToText("I have 5 dogs and 6 ponies"))).to.equal('string');
